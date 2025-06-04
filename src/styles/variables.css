@@ -1,0 +1,39 @@
+:root {
+  /* Couleurs principales */
+  --primary-color: #00BF63;
+  --primary-color-dark: #009f4a; /* pour hover / focus */
+  --secondary-color: #ffffff;
+  --background-color: #f5f5f5;
+  --background-color-alt: #ffffff; /* pour cartes, containers */
+  --text-color: #333;
+  --text-color-light: #666;
+  --error-color: #ff4d4f;
+
+  /* Polices */
+  --font-family-primary: 'Comfortaa', cursive, sans-serif;
+  --font-family-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* pour titres ou textes neutres */
+
+  /* Tailles */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.25rem;      /* 20px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  
+  /* Espacements */
+  --spacing-xs: 0.4rem;
+  --spacing-sm: 0.8rem;
+  --spacing-md: 1.2rem;
+  --spacing-lg: 1.6rem;
+
+  /* Bordures et ombres */
+  --border-radius: 8px;
+  --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --box-shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.12);
+
+  /* Transitions */
+  --transition: all 0.3s ease;
+
+  /* Breakpoints */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+}
