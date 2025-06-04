@@ -199,11 +199,18 @@
 /* Responsive */
 @media (max-width: 768px) {
   .planning-grid {
+    display: flex;
     flex-direction: column;
+    gap: var(--spacing-md);
+    width: 100%;
   }
 
   .planning-card {
-    width: 100%;
+    width: 100%;      
+    max-width: 100%;   
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
   }
 
   .popup {
@@ -215,6 +222,7 @@
     gap: var(--spacing-sm);
   }
 }
+
 /* Bouton rond toggle tâche terminée */
 .task-done-toggle {
   cursor: pointer;
