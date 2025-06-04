@@ -7,7 +7,12 @@
   --background-color-alt: #ffffff; /* pour cartes, containers */
   --text-color: #333;
   --text-color-light: #666;
+  --text-muted-color: #666;
+  --input-border-color: #ccc;
   --error-color: #ff4d4f;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
 
   /* Polices */
   --font-family-primary: 'Comfortaa', cursive, sans-serif;

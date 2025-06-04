@@ -1,0 +1,214 @@
+/* Container global */
+.planning-container {
+  padding: var(--spacing-lg);
+  background-color: var(--background-color);
+  min-height: 100vh;
+  font-family: var(--font-family-primary);
+  color: var(--text-color);
+}
+
+/* Titre principal */
+.planning-container h1 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-color);
+}
+
+/* Actions (boutons +Planning / +Tâche) */
+.planning-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Boutons arrondis */
+.pill-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-light);
+  transition: var(--transition);
+}
+
+.pill-button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.pill-button.cancel {
+  background-color: #ccc;
+  color: var(--text-color);
+}
+
+/* Grille responsive */
+.planning-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  justify-content: flex-start;
+}
+
+/* Carte de planning */
+.planning-card {
+  flex: 1 1 300px;
+  max-width: 320px;
+  background-color: var(--background-color-alt);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header de carte */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.card-header h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+/* Actions sur la carte */
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card-actions svg {
+  cursor: pointer;
+  color: var(--text-color-light);
+  transition: var(--transition);
+}
+
+.card-actions svg:hover {
+  color: var(--primary-color);
+}
+
+/* Liste des tâches */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.task-item {
+  background-color: #f9f9f9;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.task-item strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.task-item p {
+  margin: 0 0 0.2rem 0;
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+}
+
+.task-item .deadline {
+  font-size: 0.8rem;
+  color: var(--text-muted-color);
+}
+
+/* Popup générique */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--spacing-md);
+}
+
+.popup {
+  background-color: var(--background-color-alt);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-strong);
+  padding: var(--spacing-lg);
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.popup h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Champs de formulaire */
+.popup input,
+.popup textarea,
+.popup select {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-family: var(--font-family-primary);
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--border-radius);
+  background: #fff;
+  transition: var(--transition);
+}
+
+.popup input:focus,
+.popup textarea:focus,
+.popup select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Labels */
+.popup label {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Boutons de validation popup */
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .planning-grid {
+    flex-direction: column;
+  }
+
+  .planning-card {
+    width: 100%;
+  }
+
+  .popup {
+    max-width: 95%;
+  }
+
+  .planning-actions {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+}

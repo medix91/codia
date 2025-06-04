@@ -52,7 +52,7 @@ export default function Navbar() {
           <Link to="/dashboard" onClick={() => setIsOpen(false)}>Dashboard</Link>
           <Link to="/about" onClick={() => setIsOpen(false)}>À propos</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-          <Link to="/taches" onClick={() => setIsOpen(false)}>Tâches</Link>
+          <Link to="/planning" onClick={() => setIsOpen(false)}>Planning</Link>
           
 
           <div className="mobile-user">

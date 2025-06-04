@@ -9,6 +9,7 @@ import Dashboard from '../pages/Dashboard/Dashboard';
 import About from '../pages/About/About';
 import Contact from '../pages/Contact/Contact';
 import Profile from '../pages/Profile/Profile';
+import Planning from '../pages/Planning/Planning';
 
 // Plus tard : import ProtectedRoute, Dashboard, etc.
 
@@ -22,6 +23,7 @@ export default function AppRoutes() {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/planning" element={<Planning />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
 
       {/* Exemple futur pour route protégée */}
