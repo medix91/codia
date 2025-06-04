@@ -1,5 +1,6 @@
 .navbar {
-  background-color: #00BF63;
+  background-color: var(--primary-color);
+font-family: var(--font-family-primary);
   color: white;
   padding: 10px 20px;
   position: fixed;
@@ -7,4 +8,145 @@
   width: 100%;
   z-index: 10;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.logout-btn {
+  background: white;
+  color: #00BF63;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #e0ffe7;
+}
+
+.profile-pic,
+.mobile-profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+.desktop-actions {
+  display: flex;
+  align-items: center;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.mobile-user {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+/* Overlay en fond */
+.overlay {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 8;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background-color: #00BF63;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 25px;
+    padding-top: 30px;
+    transition: right 0.3s ease-in-out;
+    z-index: 9;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .desktop-actions {
+    display: none;
+  }
+
+  .mobile-user {
+    display: flex;
+  }
+  .mlb {
+    margin-top: 25%;
+  }
+}
+
+
+
+.guest-icon {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.guest-icon:hover {
+  transform: scale(1.1);
 }
