@@ -50,8 +50,10 @@ export default function Navbar() {
 
         <div ref={menuRef} className={`nav-links ${isOpen ? "open" : ""}`}>
           <Link to="/dashboard" onClick={() => setIsOpen(false)}>Dashboard</Link>
-          <Link to="/taches" onClick={() => setIsOpen(false)}>Tâches</Link>
           <Link to="/about" onClick={() => setIsOpen(false)}>À propos</Link>
+          <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link to="/taches" onClick={() => setIsOpen(false)}>Tâches</Link>
+          
 
           <div className="mobile-user">
             {user ? (
@@ -77,7 +79,9 @@ export default function Navbar() {
           {user ? (
             <>
               {user.photoURL && (
-                <img src={user.photoURL} alt="Profil" className="profile-pic" />
+               <Link to="/profile">
+              <img src={user.photoURL} alt="Profil" className="profile-pic" />
+              </Link>
               )}
               <button onClick={handleLogout} className="logout-btn">Déconnexion</button>
             </>
