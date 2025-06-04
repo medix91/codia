@@ -12,6 +12,7 @@
   font-size: 2rem;
   margin-bottom: var(--spacing-md);
   color: var(--primary-color);
+  text-align: center;
 }
 
 /* Actions (boutons +Planning / +Tâche) */
@@ -20,6 +21,8 @@
   gap: var(--spacing-sm);
   flex-wrap: wrap;
   margin-bottom: var(--spacing-lg);
+  align-items: center;
+  justify-content: center;
 }
 
 /* Boutons arrondis */
@@ -55,7 +58,7 @@
 /* Carte de planning */
 .planning-card {
   flex: 1 1 300px;
-  max-width: 320px;
+  max-width: 35%;
   background-color: var(--background-color-alt);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow-light);
@@ -211,4 +214,56 @@
     flex-direction: column;
     gap: var(--spacing-sm);
   }
+}
+/* Bouton rond toggle tâche terminée */
+.task-done-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+.task-done-toggle svg {
+  display: block;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.task-item.done .task-info strong {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 10px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.icon-button:hover {
+  color: #00bf63;
 }
