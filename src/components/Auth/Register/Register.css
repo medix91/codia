@@ -1,0 +1,210 @@
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color);
+  padding: var(--spacing-md, 1rem);
+  font-family: var(--font-family);
+  box-sizing: border-box;
+}
+
+.auth-card {
+  background: var(--secondary-color);
+  padding: 3rem 2.5rem 3.5rem 2.5rem;
+  border-radius: calc(var(--border-radius) * 2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  width: 380px;
+  max-width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  transition: width 0.3s ease;
+}
+
+.auth-logo {
+  font-size: 4.2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.2rem;
+}
+
+.auth-card h2 {
+  margin-bottom: 2rem;
+  color: #222; /* Texte sombre, pas forcément une variable */
+  font-weight: 700;
+  font-size: 1.9rem;
+  letter-spacing: 0.02em;
+}
+
+.auth-form input {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  margin-bottom: 1.4rem;
+  border-radius: calc(var(--border-radius) * 1.5);
+  border: 1.8px solid #ddd;
+  font-size: 1rem;
+  box-shadow: inset 0 1.5px 4px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  outline-offset: 2px;
+  box-sizing: border-box;
+}
+
+.auth-form input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.auth-form input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px 2px rgba(0, 191, 99, 0.3);
+  outline: none;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 50px;
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 0.3rem;
+  box-shadow: 0 6px 16px rgba(0, 191, 99, 0.4);
+}
+
+.btn-submit:hover {
+  background-color: #057d4b;
+  box-shadow: 0 10px 22px rgba(5, 125, 75, 0.6);
+}
+
+.error {
+  color: #ff4d4f;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.social-buttons {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: calc(var(--border-radius) * 1.75);
+  background-color: #f2f2f2;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.7rem;
+  color: #555;
+  user-select: none;
+}
+
+.social-btn:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.social-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  box-shadow: none;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+  font-size: 0.9rem;
+  color: #555;
+  user-select: none;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.checkbox-container label {
+  cursor: pointer;
+  user-select: none;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.auth-footer {
+  margin-top: 2.8rem;
+  font-size: 0.92rem;
+  color: #666;
+}
+
+.auth-footer a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: color 0.3s ease;
+}
+
+.auth-footer a:hover {
+  color: #057d4b;
+  text-decoration: underline;
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+
+@media (max-width: 420px) {
+  .auth-card {
+    width: 100%;
+    padding: 2.5rem 1.5rem 3rem 1.5rem;
+    border-radius: calc(var(--border-radius) * 1.5);
+  }
+
+  .auth-logo {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .auth-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-submit {
+    font-size: 1.05rem;
+    padding: 0.9rem 0;
+  }
+
+  .social-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 1.5rem;
+  }
+
+  .checkbox-container {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .auth-card {
+    width: 420px;
+  }
+}

@@ -4,9 +4,12 @@ import Login from './components/Auth/Login/Login';
 import Register from './components/Auth/Register/Register';
 
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Layout from './components/Layout/Layout';
+import ForgotPassword from './components/Auth/ForgotPassword/ForgotPassword';
 
 export default function App() {
   return (
+    <Layout>
     <Router>
       <Routes>
             <Route 
@@ -33,6 +36,14 @@ export default function App() {
      
           } 
         />
+         <Route 
+          path="/forgot-password" 
+          element={
+         
+              <ForgotPassword />
+     
+          } 
+        />
        
      
 
@@ -40,5 +51,6 @@ export default function App() {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
+    </Layout>
   );
 }
